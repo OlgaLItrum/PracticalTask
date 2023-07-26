@@ -4,8 +4,9 @@ import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.println(convertToNotTrollString(in.nextLine()));
+        try(Scanner in = new Scanner(System.in)){
+                System.out.println(convertToNotTrollString(in.nextLine()));
+        }
     }
     public static String convertToNotTrollString(String trollString){
         IntStream intStream = trollString.codePoints();
